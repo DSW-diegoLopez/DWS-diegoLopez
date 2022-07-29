@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+        <meta name="description" content="Sitio Web aprender a utilizar Flexbox, listas y enlaces en Html"/><!-- Mejoramiento SEO-->
+		<meta name="robots" content="follow"/> <!-- Mejoramiento SEO-->
+		<meta name="keywords" content="aprender  listas, enlaces, html"/> <!-- Mejoramiento SEO-->
+		<meta name="author" content="Diego Fernando Lopez" /><!-- Mejoramiento SEO-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!-- Mejoramiento SEO-->
+		<title>Proyecto  de sitio web</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="../../css/style.css">
+
+    <script language="JavaScript">
+       
+        alert("Bienvenido a la Autoevaluación correspondiente a Flexbox \n\nSeleccione las respuestas que crea correctas, teniendo en "+
+              "\ncuenta las siguientes consideraciones \n\n1. Los aciertos tienen el valor de un punto"+
+              " \n\n2. Las respuestas no contestadas ni suman ni restan puntos.") 
+        
+         
+        var resp = new Array;
+        var faite = new Array;
+        var score = 0;
+         
+        resp[1] = "p1a";
+        resp[2] = "p2c";
+        resp[3] = "p3b";
+        resp[4] = "p4c";
+        resp[5] = "p5b";
+        
+         
+        function Engine(question, repose)
+        {
+           if (repose != resp[question])
+             {
+                     if (!faite[question])
+                            {faite[question] = -1;}
+                        }
+                else {
+         
+                        if (!faite[question]) {
+                                faite[question] = -1;
+                                score++;
+                                alert("¡Correcto! Tu puntuación es : " + score );
+                                }
+         
+                        }
+        }
+         
+        function Nivel () {
+         
+            let nombre=document.getElementById("name").value;
+            let correo=document.getElementById("email").value;
+     
+            if (score == 5) {
+                    alert(nombre + "tu puntaje fue: " + score + "/5 " + "Muy bien, Puntaje perfecto");
+                    }
+            if (score >= 4 && score < 5) {
+                    alert(nombre + "tu puntaje fue: " + score + "/5 " + "Bien, pero puedes hacerlo mejor");
+                    }
+            if (score >= 3 && score < 4) {
+                    alert(nombre + "tu puntaje fue: " + score + "/5 " + "Aprobado raspando. puedes mejorar");
+                    }
+            if (score >= 2 && score < 3 ) {
+                    alert(nombre + "tu puntaje fue: " + score + "/5 " + "Insuficiente. Has de estudiar más");
+                    }
+            if (score < 2) {
+                    alert(nombre + "  Su puntuación es: "+ score
+                    +"\nLa puntuación máxima que podía obtener es 5"
+                    +"\nTiene que revisar nuevamente sus lecciones"
+                    +"\nSu porcentaje de aciertos es menos del 10%");
+                    }
+        }
+         
+        </script>
+
+
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+            <header id="header" >
+                <h1><a href="index.html">Aprende</a></h1>
+                <nav id="nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li>
+                            <a href="#">Temas</a>
+                            <ul>
+                                <li><a href="tema1.html">Tema 1</a></li>
+                                <li><a href="tema2.html">Tema 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Recursos Digitales</a>
+                            <ul>
+                                <li><a href="rmultimedia1.html">Recurso 1</a></li>
+                                <li><a href="rmultimedia2.html">Recurso 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Aprendizaje</a>
+                            <ul>
+                                <li><a href="actividad1.html">Actividad 1</a></li>
+                                <li><a href="actividad2.html">Actividad 2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Acerca de</a>
+                            <ul>
+                                <li><a href="autor.html">Autor</a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+
+			<!-- Main -->
+            <div class="row">
+                <div class="col-12">
+
+                    <!-- Form -->
+                        <section class="box">
+                            <h3>Prueba Flexbox</h3>
+                            <form method="post" action="#">
+                                <div class="row gtr-uniform gtr-50">
+                                    <div class="col-6 col-12-mobilep">
+                                        <input type="text" name="name" id="name" value="" placeholder="Nombre" required/>
+                                    </div>
+                                    <div class="col-6 col-12-mobilep">
+                                        <input type="email" name="email" id="email" value="" placeholder="Correo" required/>
+                                    </div>
+                                    <!-- <div class="col-12">
+                                        <select name="category" id="category">
+                                            <option value="">- Category -</option>
+                                            <option value="1">Manufacturing</option>
+                                            <option value="1">Shipping</option>
+                                            <option value="1">Administration</option>
+                                            <option value="1">Human Resources</option>
+                                        </select>
+                                    </div> -->
+                                    <div class="col-7 col-12-narrower">
+                                        <h3>1. Cuando hablamos de &lt;ol&gt;... &lt;/ol&gt; nos referimos </h3>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(1, this.value)" id="p1a" name="p1" value="p1a" >
+                                            <label for="p1a">Lista Ordenada</label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(1, this.value)" id="p1b" name="p1" value="p1b">
+                                            <label for="p1b">Lista desordenada</label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(1, this.value)" id="p1c" name="p1" value="p1c" >
+                                            <label for="p1c">Lista Definición</label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(1, this.value)" id="p1d" name="p1" value="p1d">
+                                            <label for="p1d">Lista reordenada</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-12-narrower">
+                                        <h3>2. Como se definie una lista desordenada  </h3>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(2, this.value)" id="p2a" name="p2" value="p2a">
+                                            <label for="p2a">&lt;ol&gt;... &lt;/ol&gt;</label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(2, this.value)" id="p2b" name="p2" value="p2b">
+                                            <label for="p2b">&lt;al&gt;... &lt;/al&gt;</label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(2, this.value)" id="p2c" name="p2" value="p2c">
+                                            <label for="p2c">&lt;ul&gt;... &lt;/ul&gt;</label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(2, this.value)" id="p2d" name="p2" value="p2d">
+                                            <label for="p2d">&lt;li&gt;... &lt;/li&gt;</label>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-7 col-12-narrower">
+                                        <h3>3. Self es una propiedad del atributo                     </h3>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(3, this.value)" id="p3a" name="p3" value="p3a">
+                                            <label for="p3a">Title</label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(3, this.value)" id="p3b" name="p3" value="p3b">
+                                            <label for="p3b">Target</label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(3, this.value)" id="p3c" name="p3" value="p3c">
+                                            <label for="p3c">Href</label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(3, this.value)" id="p3d" name="p3" value="p3d">
+                                            <label for="p3d">#</label>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-7 col-12-narrower">
+                                        <h3>4. Que sintaxis esta bien.                           </h3>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(4, this.value)" id="p4a" name="p4" value="p4a" >
+                                            <label for="p4a">&lt;href a="url"&gt;Contenido &lt;/href&gt;</label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(4, this.value)" id="p4b" name="p4" value="p4b">
+                                            <label for="p4b">&lt;a href="url"&gt;Contenido &lt;/a&gt; </label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(4, this.value)" id="p4c" name="p4" value="p4c">
+                                            <label for="p4c">&lt;a target="url"&gt;Contenido &lt;/a&gt; </label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(4, this.value)" id="p4d" name="p4" value="p4d">
+                                            <label for="p4d">&lt;target href="url"&gt;Contenido &lt;/target&gt; </label>
+                                        </div>
+                                        <div class="col-8 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(4, this.value)" id="p4e" name="p4" value="p4e">
+                                            <label for="p4e">&lt;a hrefs="url"&gt;Contenido &lt;/a&gt; </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-7 col-12-narrower">
+                                        <h3>5. la propiedad _blank del atributo Target permite </h3>
+                                        <div class="col-12 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(5, this.value)" id="p5a" name="p5" value="p5a">
+                                            <label for="p5a">intentará abrir el enlace en el frameset inmediatamente superior al que se encuentra la página</label>
+                                        </div>
+                                        <div class="col-12 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(5, this.value)" id="p5b" name="p5" value="p5b">
+                                            <label for="p5b">intentará abrir el enlace en una nueva ventana</label>
+                                        </div>
+                                        <div class="col-12 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(5, this.value)" id="p5c" name="p5" value="p5c">
+                                            <label for="p5c"> intentará abrir el enlace en la ventana padre</label>
+                                        </div>
+                                        <div class="col-12 col-12-narrower">
+                                            <input type="radio"  onClick="Engine(5, this.value)" id="p5d" name="p5" value="p5d">
+                                            <label for="p5d"> intentará abrir el enlace en el mismo marco donde está en código actual.</label>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- <div class="col-6 col-12-narrower">
+                                        <input type="checkbox" id="copy" name="copy">
+                                        <label for="copy">Email me a copy of this message</label>
+                                    </div>
+                                    <div class="col-6 col-12-narrower">
+                                        <input type="checkbox" id="human" name="human" checked>
+                                        <label for="human">I am a human and not a robot</label>
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea name="message" id="message" placeholder="Enter your message" rows="6"></textarea>
+                                    </div> -->
+                                    <div class="col-12">
+                                        <ul class="actions">
+                                            <li><input type="button" onClick="Nivel()" value="Terminar" class="alt" /></li>
+                                            <li> <input type="button" name="repose" value="Respuestas Correctas" /></li>
+                                            <li><input type="reset" value="Borrar resultados" class="alt" /></li>
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <hr />
+
+                            <!-- <form method="post" action="#">
+                                <div class="row gtr-uniform gtr-50">
+                                    <div class="col-9 col-12-mobilep">
+                                        <input type="text" name="query" id="query" value="" placeholder="Query" />
+                                    </div>
+                                    <div class="col-3 col-12-mobilep">
+                                        <input type="submit" value="Search" class="fit" />
+                                    </div>
+                                </div>
+                            </form> -->
+                        </section>
+
+                </div>
+            </div>
+
+			<!-- Footer -->
+            <footer id="footer">
+        
+                <ul class="copyright">
+                    <li>&copy;Derechos reservados.</li><li>Diseñado por: <a href="#">Diego Fdo Lopez <p>skype personal:diegofdol@outlook.com <br>Correo personal:diegofdol@outlook.com</p>
+                        </a></li>
+                        <li>Junio 2022</li>
+                </ul>
+            </footer>
+
+		</div>
+
+		<!-- Scripts -->
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/jquery.dropotron.min.js"></script>
+        <script src="../../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../../assets/js/browser.min.js"></script>
+        <script src="../../assets/js/breakpoints.min.js"></script>
+        <script src="../../assets/js/util.js"></script>
+        <script src="../../assets/js/main.js"></script>
+
+	</body>
+</html>
